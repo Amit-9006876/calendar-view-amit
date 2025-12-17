@@ -2,6 +2,12 @@
 
 A fully interactive, production-grade calendar component built with React, TypeScript, and Tailwind CSS.
 
+## Live Storybook
+https://calender-project-l32z-7l4oubfna-amits-projects-df5961c7.vercel.app/
+
+## Live Application
+https://calendar-view-amit.vercel.app/
+
 ## Features
 
 ### Core Features
@@ -65,32 +71,17 @@ src/
 └── index.css                       # Design system tokens
 ```
 
-## Usage
 
-```tsx
-import { CalendarView } from '@/components/Calendar/CalendarView';
-import { useEventManager } from '@/hooks/useEventManager';
-
-function App() {
-  const { events, addEvent, updateEvent, deleteEvent } = useEventManager();
-
-  return (
-    <CalendarView
-      events={events}
-      onEventAdd={addEvent}
-      onEventUpdate={updateEvent}
-      onEventDelete={deleteEvent}
-      initialView="month"
-      initialDate={new Date()}
-    />
-  );
-}
-```
 
 ## Storybook
 
-Run Storybook to see all component states:
+Storybook Stories
 
+Default – Month view calendar
+
+Empty – Calendar with no events
+
+Week View – Week-based calendar layout
 ```bash
 npm run storybook
 ```
@@ -104,15 +95,6 @@ npm run storybook
 - **Mobile View**: Responsive layout
 - **Accessibility**: Keyboard navigation demo
 
-## Keyboard Shortcuts
-
-| Key | Action |
-|-----|--------|
-| Tab | Move focus between elements |
-| Shift + Tab | Move focus backwards |
-| Enter / Space | Activate focused element |
-| Escape | Close modal |
-| Arrow Keys | Navigate calendar cells |
 
 ## Tech Stack
 
@@ -123,23 +105,8 @@ npm run storybook
 - **Lucide React** - Icons
 - **Storybook** - Component documentation
 
-## Design Tokens
 
-The component uses a design system with semantic tokens defined in `index.css`:
 
-- Primary colors (sky blue)
-- Neutral scale
-- Event colors (8 presets)
-- Spacing, shadows, animations
-
-## Performance
-
-- `React.memo()` for cell components
-- `useCallback` and `useMemo` for optimized re-renders
-- Efficient event filtering by date
-- Lazy modal loading
-
----
 
 ## Development
 
